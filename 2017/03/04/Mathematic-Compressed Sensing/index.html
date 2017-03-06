@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/04/Mathematic-Compressed Sensing/index.html">
 <meta property="og:site_name" content="Connorzx">
 <meta property="og:description" content="The author tries his best to present the basic relashionship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
-<meta property="og:updated_time" content="2017-03-05T03:35:08.486Z">
+<meta property="og:updated_time" content="2017-03-06T00:47:38.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compressed Sensing and Gelfand Widths">
 <meta name="twitter:description" content="The author tries his best to present the basic relashionship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
@@ -232,15 +232,15 @@
 <p>The author tries his best to present the basic relashionship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="Introduction-and-Definitions"><a href="#Introduction-and-Definitions" class="headerlink" title="Introduction and Definitions"></a>Introduction and Definitions</h2><p>Compressed Sensing deals with the problem of recovering a $k$-sparse signal $x \in R^n$ from linear observations $y \in R^m$, that is<br>$$ y=Ax,<br>$$<br>where $A \in R^{m \times n}$ is the sensing matrix.</p>
-<p>Usually, Reasearchers use Basic Pursuit(BP) to solve this problem, that is<br>$$ \min_{t \in R^n} ||t||_1 ~~~s.t. ~~At=Ax<br>$$ </p>
-<p><strong>Exact Reconstruction</strong> For any $k$-sparse signal $x$, if there is a unique solution $x$ satisfies<br>$$ \min_{t \in R^n} ||t||_1 ~~~s.t. ~~At=Ax,$$then we can say it is a Exact Reconstruction by BP.</p>
-<p><strong>Null Space Property(NSP)</strong>   $\forall h \in \ker A, h \neq 0, \forall I \subset {1,2,\ldots,n}, |I| \le k $, one has $|h_{I}|_1 &lt; |h_{I^c}|_1$.</p>
+<h2 id="Introduction-and-Definitions"><a href="#Introduction-and-Definitions" class="headerlink" title="Introduction and Definitions"></a>Introduction and Definitions</h2><p>Compressed Sensing deals with the problem of recovering a $k$-sparse signal $x \in R^n$ from linear observations $y \in R^m$, that is<br>$$ y=Ax,$$ where $A \in R^{m \times n}$ is the sensing matrix.</p>
+<p>Usually, Reasearchers use Basic Pursuit(BP) to solve this problem, that is<br>$$ \min_{t \in R^n} ||t||_1 ~~~s.t. ~~At=y<br>$$ </p>
+<p><strong>Exact Reconstruction</strong> For any $k$-sparse signal $x$, if there is a unique solution $x$ satisfies<br>$$ \min_{t \in R^n} ||t||_1 ~~~s.t. ~~At=Ax,$$then we can say $A$ satisfies Exact Reconstruction by BP.</p>
+<p><strong>Null Space Property(NSP)</strong>   $\forall h \in \ker A, h \neq 0, \forall I \subset \{1,2,\ldots,n\}, |I| \le k $, one has $||h_{I}||_1 &lt; ||h_{I^c}||_1$.</p>
 <p><strong>Restricted Isometry Property(RIP)</strong> For all $k$-sparse signal $x$, there exists a constant $\delta_k \in (0,1)$ such that<br>$$(1-\delta_k)||x||_2^2 \le ||Ax||_2^2 \le (1-\delta_k)||x||_2^2.$$ </p>
 <p><strong>$m$-th Gelfand Width of $T$</strong> Let $T$ be a bounded subset of a normed space $E$. Let $m \ge 0$ be an integer. The $m$-th Gelfand Width of $T$ is defined as<br>$$d^m(T,E):=\inf _S \sup _{x \in S \cap T} ||x||_E,$$<br>where $||\cdot||_E$ denotes the norm of $E$ and the infimum is taken over  all linear subspaces $S$ of $E$ of codimension less than or equal to $k$.</p>
 <h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><ul>
 <li>If $\delta_{2k}(A) &lt; \sqrt{2}-1$, then $A$ satisfies Exact Reconstruction.</li>
-<li>If $rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}}$, then $A$ satisfies Exact Reconstruction. We know $\ker A &gt;= n-m$.<br>With the increase of sample size $m$, rad (\ker A \cap B_1^n). Therefore, for a fixed sparsity $k$, the more sample size, the better the performance. At the same time, for a fixed sample size, the sparser the signal, the better the performance.  </li>
+<li>If $rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}}$, then $A$ satisfies Exact Reconstruction.<br>We know $\ker A &gt;= n-m$. With the increase of sample size $m$, rad (\ker A \cap B_1^n). Therefore, for a fixed sparsity $k$, the more sample size, the better the performance. At the same time, for a fixed sample size, the sparser the signal, the better the performance.  </li>
 <li>If $d^m(B_1^n,l_2^n) &lt; \frac{1}{2 \sqrt{k}}$, then there exists $A \in R^{m \times n}$ such that<br>$$rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}},$$that is, $A$ satisfies Exact Reconstruction.</li>
 </ul>
 <h2 id="Relashionship"><a href="#Relashionship" class="headerlink" title="Relashionship"></a>Relashionship</h2><p>NSP is equivalence to Exact Reconstruction, and hence if we can prove that a sufficient condition can derive NSP, we can conclude that the condition satisfies Exact Reconstruction. As a result, RIP and Gelfand Width deduce the sufficient condition by NSP.</p>
