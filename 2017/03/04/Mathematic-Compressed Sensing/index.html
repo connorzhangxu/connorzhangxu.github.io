@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/04/Mathematic-Compressed Sensing/index.html">
 <meta property="og:site_name" content="Connorzx">
 <meta property="og:description" content="The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
-<meta property="og:updated_time" content="2017-03-06T00:50:10.446Z">
+<meta property="og:updated_time" content="2017-03-08T10:49:28.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compressed Sensing and Gelfand Widths">
 <meta name="twitter:description" content="The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
@@ -240,7 +240,7 @@
 <p><strong>$m$-th Gelfand Width of $T$</strong> Let $T$ be a bounded subset of a normed space $E$. Let $m \ge 0$ be an integer. The $m$-th Gelfand Width of $T$ is defined as<br>$$d^m(T,E):=\inf _S \sup _{x \in S \cap T} ||x||_E,$$<br>where $||\cdot||_E$ denotes the norm of $E$ and the infimum is taken over  all linear subspaces $S$ of $E$ of codimension less than or equal to $k$.</p>
 <h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><ul>
 <li>If $\delta_{2k}(A) &lt; \sqrt{2}-1$, then $A$ satisfies Exact Reconstruction.</li>
-<li>If $rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}}$, then $A$ satisfies Exact Reconstruction.<br>We know $\ker A &gt;= n-m$. With the increase of sample size $m$, rad (\ker A \cap B_1^n). Therefore, for a fixed sparsity $k$, the more sample size, the better the performance. At the same time, for a fixed sample size, the sparser the signal, the better the performance.  </li>
+<li>If $rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}}$, then $A$ satisfies Exact Reconstruction.<br>We know $\ker A &gt;= n-m$. With the increase of sample size $m$, $rad (\ker A \cap B_1^n)$. Therefore, for a fixed sparsity $k$, the more sample size, the better the performance. At the same time, for a fixed sample size, the sparser the signal, the better the performance.  </li>
 <li>If $d^m(B_1^n,l_2^n) &lt; \frac{1}{2 \sqrt{k}}$, then there exists $A \in R^{m \times n}$ such that<br>$$rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}},$$that is, $A$ satisfies Exact Reconstruction.</li>
 </ul>
 <h2 id="Relationship"><a href="#Relationship" class="headerlink" title="Relationship"></a>Relationship</h2><p>NSP is equivalence to Exact Reconstruction, and hence if we can prove that a sufficient condition can derive NSP, we can conclude that the condition satisfies Exact Reconstruction. As a result, RIP and Gelfand Width deduce the sufficient condition by NSP.</p>
