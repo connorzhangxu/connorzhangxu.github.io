@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Compressed Sensing | Connorzx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
+  <meta name="description" content="The author presents the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths and lists some important properties and books.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compressed Sensing">
 <meta property="og:url" content="http://yoursite.com/2017/03/08/Mathematic-Compressed Sensing/index.html">
 <meta property="og:site_name" content="Connorzx">
-<meta property="og:description" content="The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
-<meta property="og:updated_time" content="2017-03-08T11:35:24.317Z">
+<meta property="og:description" content="The author presents the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths and lists some important properties and books.">
+<meta property="og:updated_time" content="2017-03-08T11:42:23.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compressed Sensing">
-<meta name="twitter:description" content="The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.">
+<meta name="twitter:description" content="The author presents the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths and lists some important properties and books.">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -229,7 +229,7 @@
 </div>
       
         <blockquote>
-<p>The author tries his best to present the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths.</p>
+<p>The author presents the basic relationship among Exact Reconstruction, Null Space Property(NSP), Restricted Isometry Property(RIP) and Gelfand Widths and lists some important properties and books.</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="Introduction-and-Definitions"><a href="#Introduction-and-Definitions" class="headerlink" title="Introduction and Definitions"></a>Introduction and Definitions</h2><p>Compressed Sensing deals with the problem of recovering a $k$-sparse signal $x \in R^n$ from $m$ linear observations $y \in R^m$, that is<br>$$ y=Ax,$$ where $A \in R^{m \times n}$ is the sensing matrix.</p>
@@ -244,7 +244,7 @@
 <li>If $d^m(B_1^n,l_2^n) &lt; \frac{1}{2 \sqrt{k}}$, then there exists $A \in R^{m \times n}$ such that<br>$$rad (\ker A \cap B_1^n) &lt; \frac{1}{2\sqrt{k}},$$that is, $A$ satisfies Exact Reconstruction.</li>
 </ul>
 <h2 id="Relationship"><a href="#Relationship" class="headerlink" title="Relationship"></a>Relationship</h2><p>NSP is equivalence to Exact Reconstruction, and hence if we can prove that a sufficient condition can derive NSP, we can conclude that the condition satisfies Exact Reconstruction. RIP and Gelfand Width are the sufficient condition for NSP.<br>RIP is very easy to understand and therefore is applied broadly to the proof of compressed sensing. Gelfand Width can be used in not only Exact Reconstruction but also Approximate Reconstruction, which means $y=Ax+w$, where $w$ is a random noise.</p>
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p>Researchers develop different tools for different sensing matrix $A$. Sensing matrix includes unstructured matrix such as gaussian matrix and bernoulli matrix, and structured matrix such as partial Fourier matrix and Walsh matrix. $\epsilon$-net argument and  chaining techniques are proposed to deal with unstructured matrix for compressed sensing. Empirical processes are used to deal with structured matrix. </p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p>Researchers develop different tools for different sensing matrix $A$. Sensing matrix includes unstructured matrix such as gaussian matrix and bernoulli matrix, and structured matrix such as partial Fourier matrix and Walsh matrix. <strong>$\epsilon$-net argument</strong> and  <strong>chaining techniques</strong> are proposed to deal with unstructured matrix for compressed sensing. <strong>Empirical processes</strong> are used to deal with structured matrix. </p>
 <h2 id="Recommended-Books"><a href="#Recommended-Books" class="headerlink" title="Recommended Books"></a>Recommended Books</h2><ol>
 <li>D. Chafai, O. Guédon, G. Lecué, and A. Pajor, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3374&amp;rep=rep1&amp;type=pdf" target="_blank" rel="external">Interactions between compressed sensing random matrices and high dimensional geometry.</a> Société Mathématique de France, 2012.</li>
 <li>R. Vershynin, <a href="http://www-personal.umich.edu/~romanv/papers/HDP-book/HDP-book.pdf" target="_blank" rel="external">High Dimensional Probability An Introduction with Applications in Data Science</a>, Draft, 2017.</li>
