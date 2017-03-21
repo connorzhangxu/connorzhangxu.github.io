@@ -4,33 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>《数学之美》第14章 余弦定理和新闻的分类 | Connorzx</title>
+  <title>An introduction to $\epsilon$-net argument and Symmetrization | Connorzx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本思想
-建立一个字典向量，字典里包含这种语言的所有词组；
-统计各个词组的出现次数，填充到对应词组的位置，构成文本的特征向量；
-两个特征向量之间用余弦定理求夹角。这个值表明向量之间的相关程度。之所以用夹角而不用长度，是因为不同新闻的长度可能不同，用夹角表示不需要考虑长度（即向量的模长）的差异影响。
-自动分类
-所有特征向量（N个）两两相关，将结果大于某一阈值的归为一类，共N1个小类。显然，N1&amp;lt">
+  <meta name="description" content="$\epsilon$-net argument and symmetrization are useful tools in compressed sensing. The author gives a brief introduction to these two method.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《数学之美》第14章 余弦定理和新闻的分类">
-<meta property="og:url" content="http://yoursite.com/2014/12/17/《数学之美》第14章 余弦定理和新闻的分类/index.html">
+<meta property="og:title" content="An introduction to $\epsilon$-net argument and Symmetrization">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/Mathematic-Epsilon Net Argument and Symmetrization/index.html">
 <meta property="og:site_name" content="Connorzx">
-<meta property="og:description" content="基本思想
-建立一个字典向量，字典里包含这种语言的所有词组；
-统计各个词组的出现次数，填充到对应词组的位置，构成文本的特征向量；
-两个特征向量之间用余弦定理求夹角。这个值表明向量之间的相关程度。之所以用夹角而不用长度，是因为不同新闻的长度可能不同，用夹角表示不需要考虑长度（即向量的模长）的差异影响。
-自动分类
-所有特征向量（N个）两两相关，将结果大于某一阈值的归为一类，共N1个小类。显然，N1&amp;lt">
-<meta property="og:updated_time" content="2016-03-02T02:14:06.000Z">
+<meta property="og:description" content="$\epsilon$-net argument and symmetrization are useful tools in compressed sensing. The author gives a brief introduction to these two method.">
+<meta property="og:updated_time" content="2017-03-21T12:25:50.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《数学之美》第14章 余弦定理和新闻的分类">
-<meta name="twitter:description" content="基本思想
-建立一个字典向量，字典里包含这种语言的所有词组；
-统计各个词组的出现次数，填充到对应词组的位置，构成文本的特征向量；
-两个特征向量之间用余弦定理求夹角。这个值表明向量之间的相关程度。之所以用夹角而不用长度，是因为不同新闻的长度可能不同，用夹角表示不需要考虑长度（即向量的模长）的差异影响。
-自动分类
-所有特征向量（N个）两两相关，将结果大于某一阈值的归为一类，共N1个小类。显然，N1&amp;lt">
+<meta name="twitter:title" content="An introduction to $\epsilon$-net argument and Symmetrization">
+<meta name="twitter:description" content="$\epsilon$-net argument and symmetrization are useful tools in compressed sensing. The author gives a brief introduction to these two method.">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -197,11 +182,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-《数学之美》第14章 余弦定理和新闻的分类" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Mathematic-Epsilon Net Argument and Symmetrization" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/12/17/《数学之美》第14章 余弦定理和新闻的分类/" class="article-date">
-  	<time datetime="2014-12-17T10:12:03.000Z" itemprop="datePublished">2014-12-17</time>
+      <a href="/2017/03/21/Mathematic-Epsilon Net Argument and Symmetrization/" class="article-date">
+  	<time datetime="2017-03-21T12:30:25.000Z" itemprop="datePublished">2017-03-21</time>
 </a>
     </div>
   
@@ -214,7 +199,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      《数学之美》第14章 余弦定理和新闻的分类
+      An introduction to $\epsilon$-net argument and Symmetrization
     </h1>
   
 
@@ -223,7 +208,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compressed-Sensing/">Compressed Sensing</a></li></ul>
 	</div>
 
         
@@ -240,25 +225,28 @@
          <!--02-->
         <div id="toc" class="toc-article">
     <div class="toc-title">Contents</div>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本思想"><span class="toc-text">基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动分类"><span class="toc-text">自动分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#降低算法复杂度方法"><span class="toc-text">降低算法复杂度方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提高准确性方法"><span class="toc-text">提高准确性方法</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-net-argument"><span class="toc-text">$\epsilon$-net argument</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Standard-steps-for-bound-matrix-norm"><span class="toc-text">Standard steps for bound matrix norm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Symmetrization"><span class="toc-text">Symmetrization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recommended-Books"><span class="toc-text">Recommended Books</span></a></li></ol>
 </div>
       
-        <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><ul>
-<li>建立一个字典向量，字典里包含这种语言的所有词组；</li>
-<li>统计各个词组的出现次数，填充到对应词组的位置，构成文本的特征向量；</li>
-<li><p>两个特征向量之间用余弦定理求夹角。这个值表明向量之间的相关程度。之所以用夹角而不用长度，是因为不同新闻的长度可能不同，用夹角表示不需要考虑长度（即向量的模长）的差异影响。</p>
-<h2 id="自动分类"><a href="#自动分类" class="headerlink" title="自动分类"></a>自动分类</h2></li>
-<li><p>所有特征向量（N个）两两相关，将结果大于某一阈值的归为一类，共N1个小类。显然，N1&lt;N;</p>
-</li>
-<li>将每个小类看做一个整体，计算其特征向量，每个小类之间求夹角，相关值大于阈值的归为一类，共N2类。其中，N2&lt;N1;</li>
-<li>重复上述步骤，直到所有相关值都小于阈值。停止操作，分类结束。 </li>
+        <blockquote>
+<p>$\epsilon$-net argument and symmetrization are useful tools in compressed sensing. The author gives a brief introduction to these two method.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="epsilon-net-argument"><a href="#epsilon-net-argument" class="headerlink" title="$\epsilon$-net argument"></a>$\epsilon$-net argument</h2><p>$\epsilon$-net argument is always used to bound the norm of matrix. Combining with union bound, we can easily bound for a random matrix which has sub-gaussian distributions. Further, it is easy to derive RIP by this method for sub-gaussian matrix.</p>
+<p><strong>Lemma 1</strong> Let $A$ be an $m \times n$ matrix and $\epsilon \in [0,1)$. Then, for any $\epsilon$-net $\mathcal{N}$ of the sphere $S^{n-1}$, we have<br>$$<br>\sup \limits_{x \in \mathcal{N}} ||Ax||_2 \le ||A|| \le \frac{1}{1-\epsilon} \sup \limits_{x \in \mathcal{N}} ||Ax||_2<br>$$ </p>
+<p><strong>Lemma 2</strong> Let $A$ be an $m \times n$ matrix and $\epsilon \in [0,1/2)$. Then, for any $\epsilon$-net $\mathcal{N}$ of the sphere $S^{n-1}$ and any $\epsilon$-net $\mathcal{M}$ of the sphere $S^{m-1}$, we have<br>$$<br>\sup \limits_{x \in \mathcal{N},y \in \mathcal{M}} (Ax,y) \le ||A|| \le \frac{1}{1-2\epsilon} \sup \limits_{x \in \mathcal{N},y \in \mathcal{M}} (Ax,y)<br>$$ </p>
+<h3 id="Standard-steps-for-bound-matrix-norm"><a href="#Standard-steps-for-bound-matrix-norm" class="headerlink" title="Standard steps for bound matrix norm"></a>Standard steps for bound matrix norm</h3><ul>
+<li>Step 1: Approximation. Choosing an $\epsilon$ and using Lemma 1 or 2, we get, for example,<br>$$<br>  ||A|| \le \frac{1}{1-2\epsilon} \sup \limits_{x \in \mathcal{N},y \in \mathcal{M}} (Ax,y)<br>$$with $|\mathcal{N}|\le (1+2/\epsilon)^n, |\mathcal{M}|\le (1+2/\epsilon)^m$</li>
+<li>Step 2: Concentration. Fix $x \in \mathcal{N}$ and $y \in \mathcal{M}$. Then use concentration inequality like Berstein’s Inequality or definition of distributions to give the probability of tail bound.</li>
+<li>Step 3: Union Bound. Unfix $x,y$ and take the union bound.</li>
 </ul>
-<h2 id="降低算法复杂度方法"><a href="#降低算法复杂度方法" class="headerlink" title="降低算法复杂度方法"></a>降低算法复杂度方法</h2><ul>
-<li>保存每个向量的模值；</li>
-<li>删除所有虚词。因为虚词不但不起作用，还有可能造成干扰。</li>
-<li>计算时跳过由零元素的。</li>
-</ul>
-<h2 id="提高准确性方法"><a href="#提高准确性方法" class="headerlink" title="提高准确性方法"></a>提高准确性方法</h2><p>采用特殊位置加权的办法，可以有效地提高算法效率。例如，标题、首位段以及每一段的第一句话出现的关键字都应该进行额外的加权。至于原因，你懂的！</p>
+<h2 id="Symmetrization"><a href="#Symmetrization" class="headerlink" title="Symmetrization"></a>Symmetrization</h2><p><strong>Lemma 3</strong> Let $x_1,\ldots,x_n$ be independent, mean zero random vectors in a normed space. Then</p>
+<p>$$<br>\frac{1}{2} \mathbb{E} ||\sum \limits_{i=1}^{n}\epsilon_i x_i|| \le \mathbb{E}||\sum \limits_{i=1}^{n} x_i|| \le 2 \mathbb{E}||\sum \limits_{i=1}^{n} \epsilon_i x_i||<br>$$</p>
+<p>A typical application of Symmetrization has two steps. First, general random variables $x_i$ are replaced by symmetric random variables $\epsilon_i x_i$. Next, one conditions on $x_i$ and leaves the entire randomness within $\epsilon_i$. This reduces the problem to symmetric Bernoulli random variables $\epsilon_i$, which are often simpler to deal with.</p>
+<h2 id="Recommended-Books"><a href="#Recommended-Books" class="headerlink" title="Recommended Books"></a>Recommended Books</h2><ol>
+<li>D. Chafai, O. Guédon, G. Lecué, and A. Pajor, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3374&amp;rep=rep1&amp;type=pdf" target="_blank" rel="external">Interactions between compressed sensing random matrices and high dimensional geometry.</a> Société Mathématique de France, 2012.</li>
+<li>R. Vershynin, <a href="http://www-personal.umich.edu/~romanv/papers/HDP-book/HDP-book.pdf" target="_blank" rel="external">High Dimensional Probability An Introduction with Applications in Data Science</a>, Draft, 2017.</li>
+</ol>
 
       
     </div>
@@ -268,15 +256,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2014/12/17/《数学之美》第15章 矩阵计算和文本处理中两个分类问题——SVD分解的应用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          《数学之美》第15章 矩阵计算和文本处理中两个分类问题——SVD分解的应用
-        
-      </div>
-    </a>
   
+    <a href="/2017/03/08/Mathematic-Compressed Sensing/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Compressed Sensing</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -309,7 +293,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="《数学之美》第14章 余弦定理和新闻的分类" data-title="《数学之美》第14章 余弦定理和新闻的分类" data-url="http://yoursite.com/2014/12/17/《数学之美》第14章 余弦定理和新闻的分类/"></div>
+	<div class="ds-thread" data-thread-key="Mathematic-Epsilon Net Argument and Symmetrization" data-title="An introduction to $\epsilon$-net argument and Symmetrization" data-url="http://yoursite.com/2017/03/21/Mathematic-Epsilon Net Argument and Symmetrization/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
